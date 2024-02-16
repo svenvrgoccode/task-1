@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+input,button,select{
+    font-family: "Work Sans", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: #4b27a0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    font-family: "Work Sans", sans-serif;
+}
+
+table{
+    background: white;
+    color: black;
+    font-size: 1.6rem;
+    border-radius: 0.8rem;
+    overflow: clip;
+    border: 4px solid rgb(255, 255, 255);
+}
+
+th{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+th,td{
+    width: 14rem;
+    text-align: center;
+}
+td{
+    padding: 0.7rem;
+    border-bottom: 1px solid rgba(58, 58, 58, 0.13);
+}
+
+table tr:last-of-type td{
+    border: none;
+}
+
+tr{
+    display: flex;
+}
+
+
+table tr:first-of-type{
+background: #6020F0;
+color: white;
+border-radius: 0.8rem;
+}
+
+tr td:nth-child(odd) {
+    background-color: #E9EBF7;
+}
+
+
+.wrap{
+    border: 4px solid #ffffff;
+    background: white;
+    font-size: 1.8rem;
+    color: black;
+    width: fit-content;
+    padding: 2rem;
+    border-radius: 0.8rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield; 
+    -moz-appearance: textfield; 
+    appearance: textfield; 
+}
+
+input{
+    height: 4rem;
+    padding: 1rem;
+    margin-right: 2rem;
+    font-size: inherit;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(58, 58, 58, 0.377);
+
+}
+
+input::placeholder{
+    opacity: 1;
+}
+
+input:focus{
+    outline: none;
+}
+select{
+    height: 4rem;
+    width: 8rem;
+    padding-left: 1rem;
+    font-size: inherit;
+    border-radius: 0.8rem;
+    background: white;
+    border: 1px solid rgba(58, 58, 58, 0.377);
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+    margin-left: 2rem;
+    height: 3.2em;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background: #6020F0;
+    border-radius: 0.8rem;
+    color: white;
+    border: none;
+    font-size: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
