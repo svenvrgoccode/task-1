@@ -25,7 +25,7 @@ function fetchAndDisplayData() {
 
         data.forEach((obj)=> {
             let dataRow = document.createElement('tr');
-            const option = document.createElement('option');
+            let option = document.createElement('option');
             option.value = obj.valuta;
             option.textContent = `${obj.valuta}`
             selectElement.appendChild(option)
@@ -56,7 +56,7 @@ function changeOrder() {
     let firstRow = document.querySelector('.exchangerates tr:first-of-type');
     let thNodes = firstRow.querySelectorAll('th');
 
-    const newOrder = [2, 3, 5, 4, 7,6]; 
+    let newOrder = [2, 3, 5, 4, 7,6]; 
 
     newOrder.forEach((index, i) => {
         firstRow.insertBefore(thNodes[index], firstRow.childNodes[i]);
@@ -65,7 +65,7 @@ function changeOrder() {
     let rows = document.querySelectorAll('.exchangerates tr:not(:first-of-type)');
 
     rows.forEach(row => {
-        const tdNodes = row.querySelectorAll('td');
+        let tdNodes = row.querySelectorAll('td');
         newOrder.forEach((index, i) => {
             row.insertBefore(tdNodes[index], row.childNodes[i]);
         });
@@ -73,19 +73,21 @@ function changeOrder() {
 }
 
 async function convertCurrency() {
-    const response = await fetch('exchangerates.json');
-    const data = await response.json();
+    let response = await fetch('exchangerates.json');
+    let data = await response.json();
 
-    const amount = parseFloat(document.getElementById('količina').value)
-    const selectedCurrency = document.getElementById('valuta').value
-    const selectedCurrencyData = data.find(data => data.valuta === selectedCurrency)
-    const exchangeRate = selectedCurrencyData.srednji_tecaj.replace(',','.')
+    let amount = parseFloat(document.getElementById('količina').value)
+    let selectedCurrency = document.getElementById('valuta').value
+    let selectedCurrencyData = data.find(data => data.valuta === selectedCurrency)
+    let exchangeRate = selectedCurrencyData.srednji_tecaj.replace(',','.')
+
 
     data.forEach((data)=>{
-        const cell = document.querySelector(`.${data.valuta}`)
-        const rate = parseFloat(data.srednji_tecaj.replace(',','.'))
-        const convertedAmount = (amount * parseFloat(exchangeRate) / rate).toFixed(2);
-        cell.textContent = truncateResult(convertedAmount,10)
+        let cell = document.querySelector(`.${data.valuta}`)
+        let rate = parseFloat(data.srednji_tecaj.replace(',','.'))
+        let convertedAmount = (amount * parseFloat(exchangeRate) / rate).toFixed(2);
+        let truncResult = truncateResult(convertedAmount,10)
+        cell.textContent = removeDot(truncResult)
         
     })
 
@@ -99,6 +101,10 @@ function truncateResult(result,maxLength) {
     return result;
 }
 
+
+function removeDot(str) {
+    return str.replace(/\.\d?$|\.$/, "");
+}
 
 
 

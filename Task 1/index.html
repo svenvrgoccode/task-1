@@ -7,12 +7,21 @@
     <title>Task 1</title>
 </head>
 <body>
-    <table class="exchangerates"></table>
+    <div class="table-wrap">
+        <table class="exchangerates"></table>
+    </div>
     <div class="wrap">
-        <label for="količina">Količina:</label>
-        <input type="number" id="količina" placeholder="Unesi količinu">
-        <label for="valuta">Odaberi valutu:</label>
-        <select name="valuta" id="valuta"></select>
+        <div class="group">
+            <div class="input-wrap">
+                <label for="količina">Količina:</label>
+                <input type="number" id="količina" placeholder="Unesi količinu">
+            </div>
+            <div class="select-wrap">
+                <label for="valuta">Odaberi valutu:</label>
+                <select name="valuta" id="valuta"></select>
+            </div>
+        </div>
+
         <button onclick="convertCurrency()">Pretvori</button>
     </div>
     <script src="script.js"></script>

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --main: #6527F0;
+}
 
 *{
     margin: 0;
@@ -16,9 +19,9 @@ input,button,select{
 }
 
 body{
-    height: 100vh;
-    background: #4b27a0;
     color: white;
+    background: #ffffff;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,14 +30,20 @@ body{
     font-family: "Work Sans", sans-serif;
 }
 
+.table-wrap{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
 table{
     background: white;
     color: black;
     font-size: 1.6rem;
     border-radius: 0.8rem;
-    overflow: clip;
     border:1px solid rgb(255, 255, 255);
+    width: 100%;
 }
+
+
 
 th{
     height: 6rem;
@@ -59,11 +68,12 @@ table tr:last-of-type td{
 
 tr{
     display: flex;
+    max-width: fit-content;
 }
 
 
 table tr:first-of-type{
-background: #6020F0;
+background: var(--main);
 color: white;
 border-radius: 0.8rem;
 }
@@ -80,6 +90,12 @@ tr td:nth-child(odd) {
     width: fit-content;
     padding: 2rem;
     border-radius: 0.8rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    .group{
+        display: flex;
+        align-items: center;
+    }
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -108,6 +124,8 @@ input::placeholder{
     opacity: 1;
 }
 
+
+
 input:focus{
     outline: none;
 }
@@ -131,7 +149,7 @@ button{
     height: 3.2em;
     padding-left: 3rem;
     padding-right: 3rem;
-    background: #6020F0;
+    background: var(--main);
     border-radius: 0.8rem;
     color: white;
     border: none;
@@ -142,4 +160,53 @@ button{
 
 
 
+@media(max-width:1600px){
+    .table-wrap{
+        width: 100rem;
+        overflow-x: scroll;
+    }
+}
 
+
+
+@media(max-width:1100px){
+    html{
+        font-size: 50%;
+    }
+    .group{
+        gap: 2rem;
+    }
+    .wrap{
+        width: 70vw;
+        margin: 0rem 2rem;
+        display: block ;
+        .select-wrap,.input-wrap{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            gap: 1rem;
+        }
+        input{
+            width: 100%;
+        }
+        select{
+            width: 100%;
+        }
+        button{
+            margin-left: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
+ 
+
+}
+
+@media(max-width:900px){
+    .table-wrap{
+        width: 90vw;
+    }
+    html{
+        font-size: 40%;
+    }
+}
