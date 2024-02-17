@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded",function(){
-    fetchDataAndDisplayTable();
+    fetchAndDisplayData();
 })
 
-function fetchDataAndDisplayTable() {
+function fetchAndDisplayData() {
     fetch('exchangerates.json')
      .then(response => response.json())
      .then(data => {
@@ -37,6 +37,7 @@ function fetchDataAndDisplayTable() {
             })
 
             let emptyConversionTd = document.createElement('td');
+            emptyConversionTd.className = obj.valuta
             dataRow.appendChild(emptyConversionTd)
 
             table.appendChild(dataRow)
@@ -51,35 +52,54 @@ function fetchDataAndDisplayTable() {
 
 
 
-function changeOrder(){
+function changeOrder() {
+    let firstRow = document.querySelector('.exchangerates tr:first-of-type');
+    let thNodes = firstRow.querySelectorAll('th');
 
-    let firstRow = document.querySelector('.exchangerates tr:first-of-type')
+    const newOrder = [2, 3, 5, 4, 7,6]; 
 
-    let thirdTh = firstRow.querySelector('th:nth-of-type(3)')
-    let fourthTh = firstRow.querySelector('th:nth-of-type(4)')
-    let sixthTh = firstRow.querySelector('th:nth-of-type(6)')
-    let fifthTh = firstRow.querySelector('th:nth-of-type(5)')
-    let seventhTh = firstRow.querySelector('th:nth-of-type(7)')
+    newOrder.forEach((index, i) => {
+        firstRow.insertBefore(thNodes[index], firstRow.childNodes[i]);
+    });
 
-    firstRow.insertBefore(thirdTh, firstRow.childNodes[0])
-    firstRow.insertBefore(fourthTh, firstRow.childNodes[1]);
-    firstRow.insertBefore(sixthTh, firstRow.childNodes[2]);
-    firstRow.insertBefore(fifthTh, firstRow.childNodes[3]);
-    firstRow.insertBefore(seventhTh, firstRow.childNodes[4]);
+    let rows = document.querySelectorAll('.exchangerates tr:not(:first-of-type)');
 
-
-    let rows = document.querySelectorAll('.exchangerates tr:not(:first-of-type)')
-    rows.forEach((row)=>{
-        let thirdTd = row.querySelector('td:nth-of-type(3)')
-        let fourthTd = row.querySelector('td:nth-of-type(4)')
-        let sixthTd = row.querySelector('td:nth-of-type(6)')
-        let fifthTd = row.querySelector('td:nth-of-type(5)')
-        let seventhTd = row.querySelector('td:nth-of-type(7)')
-        row.insertBefore(thirdTd, row.childNodes[0])
-        row.insertBefore(fourthTd, row.childNodes[1])
-        row.insertBefore(sixthTd, row.childNodes[2])
-        row.insertBefore(fifthTd, row.childNodes[3])
-        row.insertBefore(seventhTd, row.childNodes[4])
-    })
+    rows.forEach(row => {
+        const tdNodes = row.querySelectorAll('td');
+        newOrder.forEach((index, i) => {
+            row.insertBefore(tdNodes[index], row.childNodes[i]);
+        });
+    });
 }
+
+async function convertCurrency() {
+    const response = await fetch('exchangerates.json');
+    const data = await response.json();
+
+    const amount = parseFloat(document.getElementById('količina').value)
+    const selectedCurrency = document.getElementById('valuta').value
+    const selectedCurrencyData = data.find(data => data.valuta === selectedCurrency)
+    const exchangeRate = selectedCurrencyData.srednji_tecaj.replace(',','.')
+
+    data.forEach((data)=>{
+        const cell = document.querySelector(`.${data.valuta}`)
+        const rate = parseFloat(data.srednji_tecaj.replace(',','.'))
+        const convertedAmount = (amount * parseFloat(exchangeRate) / rate).toFixed(2);
+        cell.textContent = truncateResult(convertedAmount,10)
+        
+    })
+
+}
+
+
+function truncateResult(result,maxLength) {
+    if(result.length > maxLength) {
+        return result.substring(0,maxLength);
+    }
+    return result;
+}
+
+
+
+
 
