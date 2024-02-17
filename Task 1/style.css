@@ -19,9 +19,10 @@ input,button,select{
 }
 
 body{
+    padding: 2rem;
     color: white;
     background: #ffffff;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +32,7 @@ body{
 }
 
 .table-wrap{
+    border-radius: 0.8rem;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
@@ -159,11 +161,20 @@ button{
 }
 
 
+  
+  
+
+
+
+
+
 
 @media(max-width:1600px){
     .table-wrap{
         width: 100rem;
         overflow-x: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #6527F0 #ddd;
     }
 }
 
