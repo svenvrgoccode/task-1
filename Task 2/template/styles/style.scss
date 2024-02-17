@@ -1,0 +1,32 @@
+
+//  ============- GLOBAL =======================
+
+@use './2-basics/buttons';
+@use './2-basics/global';
+@use './2-basics/typography';
+
+//  ============- PAGES =======================
+
+@use './3-pages/index';
+
+
+//  ============- HEADER / FOOTER =======================
+
+@use './4-header-footer/header';
+@use './4-header-footer/footer';
+
+
+
+// ============- EFFECTS =======================  
+
+@use './5-effects/animation';
+@use './5-effects/hover';
+
+
+// ============- QUERY =======================
+
+
+@use './Query/index-query';
+@use './Query/global-query';
+@use './Query/footer-query';
+@use './Query/header-query';

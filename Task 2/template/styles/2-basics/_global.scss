@@ -1,0 +1,16 @@
+@use '../1-helpers-colors/mixins' as *;
+@use '../1-helpers-colors/variables' as *;
+
+
+
+body{
+  background-color: white;
+}
+
+
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

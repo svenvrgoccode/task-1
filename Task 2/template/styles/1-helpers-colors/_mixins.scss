@@ -1,0 +1,27 @@
+
+
+  @mixin background{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @mixin breakpoint($point) {
+    @if $point == phone {
+      @media (max-width: 599px) {
+        @content;
+      }
+    }
+  
+    @if $point == tablet {
+      @media (max-width: 1100px) {
+        @content;
+      }
+    }
+
+    @if $point == desk {
+      @media (max-width: 1550px) {
+        @content;
+      }
+    }
+  }

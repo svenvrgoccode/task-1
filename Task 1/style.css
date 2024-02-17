@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --main: #6527F0;
+    --main: #6D4AFF;
 }
 
 *{
@@ -21,7 +21,7 @@ input,button,select{
 body{
     padding: 2rem;
     color: white;
-    background: #ffffff;
+    background: #F7F5FF;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ body{
 
 .table-wrap{
     border-radius: 0.8rem;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(109,74,255,0.16) 0px 8px 24px 0px;
 }
 
 table{
@@ -81,7 +81,7 @@ border-radius: 0.8rem;
 }
 
 tr td:nth-child(odd) {
-    background-color: #E9EBF7;
+    background-color: #f0f1f8;
 }
 
 
@@ -92,7 +92,7 @@ tr td:nth-child(odd) {
     width: fit-content;
     padding: 2rem;
     border-radius: 0.8rem;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(109,74,255,0.16) 0px 8px 24px 0px;
     display: flex;
     .group{
         display: flex;
@@ -156,16 +156,13 @@ button{
     color: white;
     border: none;
     font-size: inherit;
-    font-weight: bold;
-    text-transform: uppercase;
+    transition: 0.2s ease;
 }
 
 
-  
-  
-
-
-
+button:hover{
+    background: #6243E6;
+}
 
 
 
@@ -174,7 +171,7 @@ button{
         width: 100rem;
         overflow-x: scroll;
         scrollbar-width: thin;
-        scrollbar-color: #6527F0 #ddd;
+        scrollbar-color: var(--main) #ddd;
     }
 }
 

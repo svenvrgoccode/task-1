@@ -1,0 +1,22 @@
+@use '../1-helpers-colors/mixins' as *;
+@use '../1-helpers-colors/variables' as *;
+
+
+@include breakpoint(desk){
+    html{
+        font-size: 50%;
+    }
+}
+
+@include breakpoint(tablet){
+    html{
+        font-size: 45%;
+    }
+}
+
+@media(max-width:500px){
+    html{
+        font-size: 40%;
+    }
+}
+

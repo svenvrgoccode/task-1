@@ -1,0 +1,45 @@
+@use '../1-helpers-colors/mixins' as *;
+@use '../1-helpers-colors/variables' as *;
+
+
+nav{
+    .social{
+        display: none;
+    }
+    .menu-button{
+        display: none;
+    }
+    a{
+        margin-top: 4.3rem;
+        color: $txt2;
+        letter-spacing: 0.16rem;
+        font-weight: 600;
+        height: 5.5rem;
+        width: 21.2rem;
+        min-width: 17.2rem;
+    }
+    a:last-of-type{
+        width: 28.5rem;
+        min-width: 24.5rem;
+    }
+    a:nth-of-type(1),a:nth-of-type(2),a:nth-of-type(3){
+        text-align: right;
+    }
+ 
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+
+ 
+
+}
+
+.rect{
+    display: block;
+    min-width: 15.6rem;
+    height: 12.2rem;
+    background: $rect;
+    margin-left: 12.99rem;
+    margin-right: 13.6rem;
+}

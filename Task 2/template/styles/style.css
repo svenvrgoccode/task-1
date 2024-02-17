@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+body {
+  background-color: white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1.8rem;
+}
+
+.logo {
+  font-size: 2.2rem;
+}
+
+ul {
+  padding: 0rem;
+  list-style: none;
+}
+
+div,
+li,
+i,
+button,
+label,
+input,
+p {
+  font-size: 1.8rem;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-weight: normal;
+  font-family: "Abril Fatface", serif;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+.hero-bg-sm {
+  display: none;
+}
+
+.hero-bg {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: black;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.hero-index {
+  text-align: center;
+}
+.hero-index h2 {
+  color: white;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+.hero-index h1 {
+  color: white;
+  line-height: 0;
+  transform: translateY(-2rem);
+}
+.hero-index .arrow {
+  display: block;
+}
+
+nav .social {
+  display: none;
+}
+nav .menu-button {
+  display: none;
+}
+nav a {
+  margin-top: 4.3rem;
+  color: white;
+  letter-spacing: 0.16rem;
+  font-weight: 600;
+  height: 5.5rem;
+  width: 21.2rem;
+  min-width: 17.2rem;
+}
+nav a:last-of-type {
+  width: 28.5rem;
+  min-width: 24.5rem;
+}
+nav a:nth-of-type(1), nav a:nth-of-type(2), nav a:nth-of-type(3) {
+  text-align: right;
+}
+nav .container {
+  display: flex;
+  justify-content: center;
+}
+
+.rect {
+  display: block;
+  min-width: 15.6rem;
+  height: 12.2rem;
+  background: #C1C1C1;
+  margin-left: 12.99rem;
+  margin-right: 13.6rem;
+}
+
+@media (max-width: 1100px) {
+  .hero-bg {
+    display: none;
+  }
+  .hero-bg-sm {
+    display: block;
+  }
+}
+@media (max-width: 1550px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 1100px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 1550px) {
+  .rect {
+    margin-left: 10.99rem;
+    margin-right: 11.6rem;
+  }
+  nav a {
+    min-width: 15.2rem;
+  }
+  nav a:last-of-type {
+    min-width: 22.5rem;
+  }
+}
+@media (max-width: 1100px) {
+  nav .container {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+  }
+  nav a:not(.social a) {
+    display: none;
+  }
+  nav a {
+    margin-top: 0;
+    width: fit-content;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  nav a:last-of-type {
+    min-width: fit-content !important;
+    width: fit-content !important;
+  }
+  nav .social {
+    display: flex;
+    gap: 2.6rem;
+  }
+  nav .social svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  nav .social svg path {
+    fill: #808080;
+  }
+  .menu-button {
+    display: block !important;
+    height: fit-content;
+    background: none;
+  }
+  .menu-button .hamburger {
+    display: flex;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .menu-button .hamburger .line {
+    display: block;
+    width: 90%;
+    height: 0.5rem;
+    background: #808080;
+  }
+  .rect {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    transform: translateX(1.8rem) scale(0.8, 1);
+    transform-origin: top;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

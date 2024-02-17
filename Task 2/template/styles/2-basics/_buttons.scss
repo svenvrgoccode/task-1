@@ -1,0 +1,8 @@
+@use '../1-helpers-colors/mixins' as *;
+@use '../1-helpers-colors/variables' as *;
+
+button{
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
