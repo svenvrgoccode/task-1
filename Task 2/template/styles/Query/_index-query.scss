@@ -2,11 +2,3 @@
 @use '../1-helpers-colors/variables' as *;
 
 
-@include breakpoint(tablet){
-    .hero-bg{
-        display: none;
-    }
-    .hero-bg-sm{
-        display: block;
-    }
-}
