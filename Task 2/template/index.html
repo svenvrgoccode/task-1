@@ -443,4 +443,15 @@
 </footer>
 </body>
 <script defer src="script.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
+<script>
+  const lenis = new Lenis()
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+</script>
 </html>
