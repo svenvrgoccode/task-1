@@ -782,9 +782,17 @@ form input[type=text]:focus {
   }
 }
 @media (max-width: 620px) {
+  .proizvodi-index .container-2 .col {
+    height: 26rem;
+    width: 29rem;
+  }
   .proizvodi-index .container-2 .row:nth-of-type(2), .proizvodi-index .container-2 .row:nth-of-type(3) {
     flex-direction: column;
     align-items: center;
+  }
+  .proizvodi-index .container-2 .product img {
+    width: 20.9rem;
+    height: 17.6rem;
   }
   .kolekcije-index .col {
     width: initial !important;
@@ -844,7 +852,7 @@ form input[type=text]:focus {
 }
 @media (max-width: 500px) {
   html {
-    font-size: 40%;
+    font-size: 43%;
   }
 }
 @media (max-width: 1100px) {
