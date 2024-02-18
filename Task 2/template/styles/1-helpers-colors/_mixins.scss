@@ -7,21 +7,27 @@
   }
 
   @mixin breakpoint($point) {
-    @if $point == phone {
-      @media (max-width: 599px) {
-        @content;
-      }
-    }
-  
-    @if $point == tablet {
-      @media (max-width: 1100px) {
-        @content;
-      }
-    }
 
     @if $point == desk {
       @media (max-width: 1650px) {
         @content;
       }
     }
+    @if $point == tablet {
+      @media (max-width: 1100px) {
+        @content;
+      }
+    }
+
+    @if $point == phone {
+      @media (max-width: 599px) {
+        @content;
+      }
+    }
+    @if $point == sm {
+      @media(max-width: 500px){
+        @content
+      }
+    }
   }
+

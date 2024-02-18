@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="vite.svg">
   <title>Template</title>
 </head>
 <body>
   <header>
     <nav>
       <div class="container">
-
+        <div class="link-wrap">
           <a href="#">POČETNA</a>
           <a href="#">PROIZVODI</a>
           <a href="#">KATALOZI</a>
+        </div>
         <div class="rect"></div>
+        <div class="link-wrap">
           <a href="#">SALONI</a>
           <a href="#">O NAMA</a>
-          <a class="nav-btn btn btn-secondary" href="#">KONTAKT</a>
+          <a href="#">DOGOVORI SASTANAK</a>
+        </div>
           <button class="menu-button">
             <div class="hamburger">
               <span class="line"></span>
@@ -29,8 +33,83 @@
       </div>
     </nav>
   </header>
-
-  
+<picture class="hero-bg">
+  <source media="(max-width: 1100px)" srcset="public/images/Image%202.png">
+  <source media="(min-width: 1100px)" srcset="public/images/Image%202@2x.png">
+  <img src="public/images/Image%202@2x.png" alt="Description of the image">
+</picture>
+<section class="hero-index">
+  <div class="text-wrap">
+    <h2>MOJE KUPAONICE.</h2>
+    <h1>Sto posto udobne</h1>
+  </div>
+  <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 angle">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+  </svg>
+</section>
+<section class="proizvodi-index">
+  <div class="container-2">
+    <div class="row">
+      <h2>Izdvojene kategorije proizvoda</h2>
+      <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+    </div>
+    <div class="row">
+      <div class="col">
+        <picture class="product">
+          <source media="(max-width: 1100px)" srcset="public/images/plocice.png">
+          <source media="(min-width: 1100px)" srcset="public/images/plocice@2x.png">
+          <img src="public/images/plocice@2x.png" alt="Description of the image">
+        </picture>
+        <p>PLOČICE</p>
+      </div>
+      <div class="col">
+        <picture class="product">
+          <source media="(max-width: 1100px)" srcset="public/images/umivaonik.png">
+          <source media="(min-width: 1100px)" srcset="public/images/umivaonik@2x.png">
+          <img src="public/images/umivaonik@2x.png" alt="Description of the image">
+        </picture>
+        <p>MIJEŠALICE ZA UMIVAONIKE I KUHINJE</p>
+      </div>
+      <div class="col">
+        <picture class="product">
+          <source media="(max-width: 1100px)" srcset="public/images/MJESALICE-KADA.png">
+          <source media="(min-width: 1100px)" srcset="public/images/MJESALICE-KADA@2x.png">
+          <img src="public/images/MJESALICE-KADA@2x.png" alt="Description of the image">
+        </picture>
+        <p>MIJEŠALICE ZA TUŠEVE I KADE</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <picture class="product">
+          <source media="(max-width: 1100px)" srcset="public/images/kada.png">
+          <source media="(min-width: 1100px)" srcset="public/images/kada@2x.png">
+          <img src="public/images/kada@2x.png" alt="Description of the image">
+        </picture>
+        <p>KADE</p>
+      </div>
+      <div class="col">
+        <picture class="product">
+          <source media="(max-width: 1100px)" srcset="public/images/tuskabine.png">
+          <source media="(min-width: 1100px)" srcset="public/images/tuskabine@2x.png">
+          <img src="public/images/tuskabine@2x.png" alt="Description of the image">
+        </picture>
+        <p>TUŠ KABINE</p>
+      </div>
+      <div class="col">
+        <picture class="product">
+          <source media="(max-width: 1100px)" srcset="public/images/tuskada.png">
+          <source media="(min-width: 1100px)" srcset="public/images/tuskada@2x.png">
+          <img src="public/images/tuskada@2x.png" alt="Description of the image">
+        </picture>
+        <p>TUŠ KADE</p>
+      </div>
+    </div>
+    <div class="row">
+      <a class="btn btn-primary" href="#">Pogledaj sve</a>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>

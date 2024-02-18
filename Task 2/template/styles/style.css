@@ -5,12 +5,19 @@ button {
 }
 
 .btn {
-  border: none;
   cursor: pointer;
   font-family: inherit;
-  font-weight: bold !important;
   width: 20rem;
   height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.btn-primary {
+  border: 1px solid black;
 }
 
 body {
@@ -21,6 +28,11 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.container-2 {
+  max-width: 158.2rem;
+  margin: auto;
 }
 
 html {
@@ -89,40 +101,139 @@ h5 {
   font-size: 2.5rem;
 }
 
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.hero-bg img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-index {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero-index .text-wrap {
+  padding: 0rem 2rem;
+}
+.hero-index h2 {
+  font-weight: 600;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+.hero-index h1 {
+  color: white;
+}
+.hero-index .angle {
+  position: absolute;
+  bottom: 4rem;
+  width: 8rem;
+  filter: invert(63%) sepia(0%) saturate(0%) hue-rotate(28deg) brightness(96%) contrast(87%);
+}
+
+.proizvodi-index {
+  margin-top: 11.3rem;
+}
+.proizvodi-index h2 {
+  margin-top: 7.4rem;
+  margin-bottom: 2rem;
+}
+.proizvodi-index .container-2 {
+  background: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+}
+.proizvodi-index .container-2 .col {
+  height: 17rem;
+  width: 29rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.proizvodi-index .container-2 .col p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.proizvodi-index .container-2 .row:first-of-type {
+  text-align: center;
+}
+.proizvodi-index .container-2 .row:first-of-type p {
+  color: #4C4C4C;
+  margin-bottom: 8rem;
+}
+.proizvodi-index .container-2 .row:first-of-type {
+  flex-direction: column;
+}
+.proizvodi-index .container-2 .row {
+  display: flex;
+}
+.proizvodi-index .container-2 .row:nth-of-type(2) {
+  gap: 14rem;
+  justify-content: center;
+  margin-bottom: 11.3rem;
+}
+.proizvodi-index .container-2 .row:nth-of-type(3) {
+  gap: 14rem;
+  justify-content: center;
+}
+.proizvodi-index .container-2 .product img {
+  width: 14.9rem;
+  height: 11.6rem;
+  margin-bottom: 2.6rem;
+}
+.proizvodi-index .container-2 .btn {
+  margin: auto;
+  margin-top: 10rem;
+  margin-bottom: 8.2rem;
+}
+
 header {
   position: fixed;
   left: 0;
   right: 0;
+  background: black;
+  z-index: 100;
 }
 
 nav .menu-button {
   display: none;
+  cursor: pointer;
+}
+nav .link-wrap {
+  display: flex;
+  gap: 12rem;
 }
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
   padding: 0rem 10rem;
 }
 nav .container a {
-  border: 1px solid pink;
+  margin-top: 4.3rem;
+  margin-bottom: 4.3rem;
   color: white;
   font-weight: 600;
   letter-spacing: 0.16rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20rem;
-  height: 6rem;
 }
 nav .container .rect {
   display: block;
   height: 12.2rem;
   width: 15.6rem;
   background: #C1C1C1;
-  top: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 1650px) {
@@ -132,22 +243,40 @@ nav .container .rect {
 }
 @media (max-width: 1100px) {
   html {
-    font-size: 45%;
+    font-size: 46%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 599px) {
   html {
-    font-size: 40%;
+    font-size: 43%;
+  }
+}
+@media (max-width: 1650px) {
+  nav .link-wrap {
+    gap: 10rem;
+  }
+  nav .container {
+    padding: 0rem 14rem;
+  }
+}
+@media (max-width: 1350px) {
+  nav .link-wrap {
+    gap: 6rem;
+  }
+  nav .container {
+    padding: 0rem 6rem;
   }
 }
 @media (max-width: 1100px) {
   nav .container {
     padding: 0rem 2rem;
+    height: 10rem;
   }
   nav a {
     display: none !important;
   }
   nav .menu-button {
+    margin-right: auto;
     display: block;
     background: none;
     padding: 0;
@@ -167,6 +296,12 @@ nav .container .rect {
     width: 100%;
     height: 0.4rem;
     background: #808080;
+  }
+}
+@media (max-width: 599px) {
+  nav .rect {
+    height: 10.2rem !important;
+    width: 13.6rem !important;
   }
 }
 

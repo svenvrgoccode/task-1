@@ -7,11 +7,21 @@ button{
 }
 
 .btn{
-    border: none;
     cursor: pointer;
     font-family: inherit;
-    font-weight: bold !important;
     width: 20rem;
     height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
+
+.btn-primary{
+    border: 1px solid $btn1;
+}
+
+
+
 

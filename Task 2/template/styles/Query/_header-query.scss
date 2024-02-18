@@ -1,19 +1,39 @@
 @use '../1-helpers-colors/mixins' as *;
 @use '../1-helpers-colors/variables' as *;
 
-// @include breakpoint(desk){
+@include breakpoint(desk){
+    nav{
+        .link-wrap{
+            gap: 10rem;
+            }
+            .container{
+                padding: 0rem 14rem;
+            }
+    }
+}
 
-// }
+@media (max-width: 1350px) {
+    nav{
+        .link-wrap{
+            gap: 6rem;
+        }
+        .container{
+            padding: 0rem 6rem;
+        }
+    }
+}
 
 @include breakpoint(tablet){
     nav{
         .container{
             padding: 0rem 2rem;
+            height: 10rem;
         }
         a{
             display: none !important;
         }
         .menu-button{
+            margin-right: auto;
             display: block;
             background: none;
             padding: 0;
@@ -35,5 +55,14 @@
             }
         }
 
+    }
+}
+
+@include breakpoint(phone){
+    nav{
+        .rect{
+            height: 10.2rem !important;
+            width: 13.6rem !important;
+        }
     }
 }
