@@ -39,6 +39,11 @@ img {
   margin: auto;
 }
 
+section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -70,6 +75,11 @@ input,
 p {
   font-size: 1.8rem;
   color: black;
+  text-wrap: balance;
+}
+
+p {
+  line-height: 1.4;
 }
 
 a {
@@ -83,26 +93,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: "Abril Fatface", serif;
   margin: 0;
+  text-wrap: balance;
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: clamp(1.9px, 17vw, 10rem);
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: clamp(1.8px, 13vw, 5rem);
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: clamp(1.7px, 12vw, 3rem);
 }
 
 h4 {
-  font-size: 2.8rem;
+  font-size: clamp(1.6px, 11vw, 2.8rem);
 }
 
 h5 {
-  font-size: 2.5rem;
+  font-size: clamp(1.6px, 10vw, 2.6rem);
 }
 
 .hero-bg {
@@ -149,6 +160,7 @@ h5 {
   margin-top: 11.3rem;
 }
 .proizvodi-index h2 {
+  padding: 0rem 2rem;
   margin-top: 7.4rem;
   margin-bottom: 2rem;
 }
@@ -167,6 +179,7 @@ h5 {
 .proizvodi-index .container-2 .col p {
   font-size: 1.4rem;
   font-weight: 500;
+  text-align: center;
 }
 .proizvodi-index .container-2 .row:first-of-type {
   text-align: center;
@@ -206,6 +219,7 @@ h5 {
   margin-bottom: 9rem;
 }
 .kolekcije-index .row:first-of-type h2 {
+  padding: 0rem 2rem;
   height: 6.6rem;
   margin-top: 12.5rem;
   margin-bottom: 1.8rem;
@@ -296,6 +310,7 @@ h5 {
 .showroom-index .container-2 .row:last-of-type .img-wrap img {
   height: 100%;
   object-fit: cover;
+  width: 100%;
 }
 .showroom-index .container-2 .row:last-of-type svg {
   position: absolute;
@@ -308,6 +323,7 @@ h5 {
 .info-index .container-2 .row {
   display: flex;
   justify-content: space-between;
+  gap: 4rem;
 }
 .info-index .container-2 .row .col {
   padding-bottom: 7rem;
@@ -413,6 +429,8 @@ nav .container .rect {
 }
 
 footer {
+  margin-left: 2rem;
+  margin-right: 2rem;
   margin-bottom: 10.5rem;
   margin-top: 7.3rem;
 }
@@ -447,6 +465,85 @@ footer .container-2 ul li:last-of-type {
   width: 31.5rem;
 }
 
+@media (max-width: 1100px) {
+  .proizvodi-index .row:nth-of-type(2), .proizvodi-index .row:nth-of-type(3) {
+    gap: 4rem !important;
+    padding: 0rem 2rem;
+  }
+  .kolekcije-index h2 {
+    height: initial !important;
+  }
+  .kolekcije-index .row {
+    gap: 6rem !important;
+  }
+  .kolekcije-index .row:first-of-type p {
+    margin-top: 3rem;
+  }
+  .kolekcije-index .row:nth-of-type(2) {
+    margin-bottom: 14rem;
+  }
+  .showroom-index .container-2 .row:last-of-type {
+    gap: 2rem;
+  }
+  .info-index .col {
+    padding: 2rem;
+  }
+  .info-index h3 {
+    width: 30rem !important;
+  }
+  .info-index input[type=text] {
+    width: 70% !important;
+  }
+  .info-index .social {
+    gap: 6rem !important;
+  }
+  .info-index form {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem !important;
+  }
+}
+@media (max-width: 620px) {
+  .proizvodi-index .container-2 .row:nth-of-type(2), .proizvodi-index .container-2 .row:nth-of-type(3) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .kolekcije-index .col {
+    width: initial !important;
+  }
+  .kolekcije-index .row:nth-of-type(2), .kolekcije-index .row:nth-of-type(3) {
+    flex-direction: column;
+  }
+  .kolekcije-index .row:nth-of-type(2) .col:first-of-type {
+    order: 1;
+    text-align: center;
+  }
+  .kolekcije-index .row:nth-of-type(2) .col:first-of-type .btn {
+    margin: auto;
+  }
+  .kolekcije-index .row:nth-of-type(3) .col:first-of-type {
+    order: 2;
+    text-align: center;
+  }
+  .kolekcije-index .row:nth-of-type(3) .col:first-of-type .btn {
+    margin: auto;
+  }
+  .showroom-index .container-2 .row:last-of-type {
+    flex-direction: column;
+  }
+  .showroom-index .container-2 .row:last-of-type .col {
+    width: 100%;
+  }
+  .info-index .row {
+    flex-direction: column;
+  }
+  .info-index .col {
+    width: initial !important;
+  }
+  .info-index .col:nth-of-type(1) {
+    margin-bottom: 6rem;
+  }
+}
 @media (max-width: 1650px) {
   html {
     font-size: 50%;
@@ -454,12 +551,40 @@ footer .container-2 ul li:last-of-type {
 }
 @media (max-width: 1100px) {
   html {
-    font-size: 46%;
+    font-size: 47%;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 620px) {
   html {
-    font-size: 43%;
+    font-size: 45%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 1100px) {
+  footer .container-2 ul li:last-of-type {
+    width: 21.5rem;
+  }
+  footer .container-2 ul li {
+    width: 13.5rem;
+  }
+  footer .copy {
+    padding: 2rem;
+  }
+  footer .container-2 {
+    padding-top: 7rem;
+  }
+  footer ul {
+    justify-content: center;
+    padding: 0rem 2rem;
+    flex-wrap: wrap;
+  }
+  footer ul li {
+    height: 10rem !important;
+    margin: 0 !important;
   }
 }
 @media (max-width: 1650px) {
@@ -509,7 +634,7 @@ footer .container-2 ul li:last-of-type {
     background: #808080;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 620px) {
   nav .rect {
     height: 10.2rem !important;
     width: 13.6rem !important;

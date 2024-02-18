@@ -3,11 +3,11 @@
 // FONT SIZES YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 
 
-$header1: 10rem; 
-$header2: 5rem;
-$header3: 3rem; 
-$header4: 2.8rem;
-$header5: 2.5rem;
+$header1: clamp(1.9px,17vw,10rem); 
+$header2: clamp(1.8px,13vw,5rem);
+$header3: clamp(1.7px,12vw,3rem); 
+$header4: clamp(1.6px,11vw,2.8rem);
+$header5: clamp(1.6px,10vw,2.6rem);
 
 $textSm: 1.4rem;
 $textMd: 2rem;

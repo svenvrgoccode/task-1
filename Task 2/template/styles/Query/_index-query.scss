@@ -2,3 +2,114 @@
 @use '../1-helpers-colors/variables' as *;
 
 
+@include breakpoint(tablet){
+    .proizvodi-index{
+        .row:nth-of-type(2),.row:nth-of-type(3){
+            gap: 4rem !important;
+            padding: 0rem 2rem;
+        }
+    }
+    .kolekcije-index{
+        h2{
+            height: initial !important;
+        }
+        .row{
+            gap: 6rem !important;
+        }
+        .row:first-of-type{
+            p{
+                margin-top: 3rem;
+            }
+        }
+        .row:nth-of-type(2){
+            margin-bottom: 14rem;
+        }
+    }
+    .showroom-index{
+        .container-2{
+            .row:last-of-type{
+                gap: 2rem;
+            }
+        }
+    }
+    .info-index{
+        .col{
+            padding: 2rem;
+        }
+        h3{
+            width: 30rem !important;
+        }
+        input[type="text"]{
+            width: 70% !important;
+        }
+  
+        .social{
+            gap: 6rem !important;
+        }
+        form{
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem !important;
+        }
+    }
+}
+
+@include breakpoint(phone){
+    .proizvodi-index{
+        .container-2{
+            .row:nth-of-type(2),.row:nth-of-type(3){
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    .kolekcije-index{
+        .col{
+            width: initial !important;
+        }
+        .row:nth-of-type(2),.row:nth-of-type(3){
+            flex-direction: column;
+        }
+        .row:nth-of-type(2){
+            .col:first-of-type{
+                order: 1;
+                text-align: center;
+                .btn{
+                    margin: auto;
+                }
+            }
+        }
+        .row:nth-of-type(3){
+            .col:first-of-type{
+                order: 2;
+                text-align: center;
+                .btn{
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .showroom-index{
+        .container-2{
+            .row:last-of-type{
+                flex-direction: column;
+                .col{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .info-index{
+        .row{
+            flex-direction: column;
+        }
+        .col{
+            width: initial !important;
+        }
+        .col:nth-of-type(1){
+            margin-bottom: 6rem;
+        }
+    }
+}

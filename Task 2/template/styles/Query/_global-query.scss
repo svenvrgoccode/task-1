@@ -9,12 +9,18 @@
 }
 @include breakpoint(tablet){
     html{
-        font-size: 46%;
+        font-size: 47%;
     }
 }
 @include breakpoint(phone){
     html{
-        font-size: 43%;
+        font-size: 45%;
     }
 }
 
+
+@include breakpoint(sm){
+    html{
+        font-size: 40%;
+    }
+}

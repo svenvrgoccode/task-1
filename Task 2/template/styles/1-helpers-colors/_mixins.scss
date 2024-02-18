@@ -20,7 +20,7 @@
     }
 
     @if $point == phone {
-      @media (max-width: 599px) {
+      @media (max-width: 620px) {
         @content;
       }
     }
