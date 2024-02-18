@@ -2,19 +2,30 @@
 @use '../1-helpers-colors/variables' as *;
 
 header{
+  height: 11rem;
     position: fixed;
     left: 0;
     right: 0;
-    background: black;
     z-index: 100;
+  transition: 0.3s ease-out;
+
+}
+
+header.active{
+  background: rgba(0, 0, 0, 0.808);
 }
 
 nav{
-    .menu-button{
-        display: none;
-        cursor: pointer;
+  .phone{
+    display: none;
+    svg{
+      width: 4rem;
+      height: 4rem;
     }
-
+    path{
+      fill: white;
+    }
+  }
     .link-wrap{
         display: flex;
         gap: 12rem;
@@ -40,7 +51,116 @@ nav{
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            transition: 0.3s ease-out;
         }
+  
     }
 }
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+  }
+  
+  .menu-icon .bar {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .menu-open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-10px, 6px);
+  }
+  
+  .menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-9px, -6px);
+  }
+
+
+.dropdown{
+  position: absolute;
+  background: $main2;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 11rem;
+  padding-top: 2rem;
+  .row{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 23rem;
+    .col{
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 18.5rem;
+      width: 27.5rem;
+      img{
+        margin: auto;
+        width: 12.6rem;
+        height: 9.8rem;
+      }
+      width: 18.5rem;
+      p{
+        font-size: $textSm;
+        letter-spacing: 0.07rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .btn{
+    margin-left: auto;
+    margin-right: 8rem;
+    transform: translateY(-6rem);
+  }
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-out;
+
+}
+
+.dropdown.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-dropdown{
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  position: fixed;
+  top: 20rem;
+  background: rgba(0, 0, 0, 0.808);
+  width: 100%;
+  top: 11rem;
+  z-index: 99;
+  padding: 2rem;
+  a{
+    color: $txt2;
+    font-weight: 600;
+    letter-spacing: 0.16rem;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-out;
+}
+
+.mobile-dropdown.active{
+  opacity: 1;
+  pointer-events: all;
+}

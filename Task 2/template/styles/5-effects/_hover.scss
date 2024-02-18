@@ -2,3 +2,101 @@
 @use '../1-helpers-colors/variables' as *;
 
 
+.showroom-index{
+    .img-wrap::before{
+        content: '';
+        transition: 0.3s ease-out;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.733);
+        opacity: 0;
+    }
+    .img-wrap::after{
+        content: 'POGLEDAJ';
+        transition: 0.3s ease-out;
+        position: absolute;
+        bottom: 3.4rem;
+        color: $txt2;
+        font-weight: bold;
+        right: 9.4rem;
+        opacity: 0;
+    }
+    .img-wrap:hover::before{
+        opacity: 1;
+    }
+    .img-wrap:hover::after{
+        opacity: 1;
+    }
+}
+
+
+.animate-btn.btn-primary{
+    overflow: hidden;
+    .text{
+        position: absolute;
+        z-index: 2;
+        transition: 0.2s ease-out;
+    }
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $btn1-hover;
+        transform: translateY(110%) scale(1.1);
+        transition: 0.2s ease-out;
+    }
+}
+
+.animate-btn.btn-primary:hover{
+    .text{
+        color: $btn2-hover;
+    }
+    .overlay{
+        transform: translateY(0%) scale(1.1);
+    }
+}
+
+
+
+.animate-btn.btn-secondary{
+    overflow: hidden;
+    .text{
+        position: absolute;
+        z-index: 2;
+        transition: 0.2s ease-out;
+    }
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $btn2-hover;
+        transform: translateY(110%) scale(1.1);
+        transition: 0.2s ease-out;
+    }
+}
+
+
+.animate-btn.btn-secondary:hover{
+    .text{
+        color: $btn1-hover;
+    }
+    .overlay{
+        transform: translateY(0%) scale(1.1);
+    }
+}
+
+.product:hover{
+    scale: 1.1;
+}
+
+.info-index{
+    .social a:hover{
+        path{
+            fill: white !important;
+        }
+    }
+}

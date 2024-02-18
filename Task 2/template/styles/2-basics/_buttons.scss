@@ -9,20 +9,27 @@ button{
 .btn{
     cursor: pointer;
     font-family: inherit;
-    width: 20rem;
-    height: 6rem;
+    width: 20rem ;
+    height: 6rem ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .btn-primary{
     border: 1px solid $btn1;
+    color: $btn1 !important;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
 }
 .btn-secondary{
     border: 1px solid $btn2 !important;
+    position: relative;
+    overflow: hidden;
+    color: $btn2;
 }
 
 

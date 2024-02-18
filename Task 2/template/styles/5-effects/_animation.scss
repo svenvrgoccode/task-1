@@ -2,4 +2,18 @@
 @use '../1-helpers-colors/variables' as *;
 
 
+.hero-index .angle{
+animation: angleAnimation 3s ease-out infinite;
+}
 
+@keyframes angleAnimation{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

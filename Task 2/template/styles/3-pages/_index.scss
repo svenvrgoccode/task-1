@@ -91,6 +91,7 @@
             justify-content: center;
         }
         .product{
+            transition: 0.3s ease-out;
             img{
                 width: 14.9rem;
                 height: 11.6rem;
@@ -151,10 +152,12 @@
         margin-top: 6.5rem;
     }
     .slider{
+        overflow: hidden;
         position: relative;
         height: 100%;
         width: 100%;
         picture{
+            transition: 0.3s ease-out;
             position: absolute;
             height: 100%;
             width: 100%;
@@ -164,6 +167,24 @@
                 object-fit: cover;
             }
         }
+    }
+    .kolekcije2{
+        transform: translateX(100%);
+    }
+    .kolekcije2.active{
+        transform: translateX(0%);
+    }
+    .kolekcije1.active{
+        transform: translateX(-100%);
+    }
+    .kolekcije3{
+        transform: translateX(100%);
+    }
+    .kolekcije3.active{
+        transform: translateX(0%);
+    }
+    .kolekcije4.active{
+        transform: translateX(-100%);
     }
 
 }
@@ -263,6 +284,7 @@
                     height: 6rem;
                     path{
                         fill: #808080;
+                        transition: 0.3s ease-out;
                     }
                 }
             }
