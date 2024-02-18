@@ -2,3 +2,37 @@
 @use '../1-helpers-colors/variables' as *;
 
 
+footer{
+    margin-bottom: 10.5rem;
+    margin-top: 7.3rem;
+    .container-2{
+      background: $main1;
+      a{
+        color: $txt2;
+        font-weight: 600;
+        letter-spacing: 0.16rem;
+      }
+      .copy{
+        color: $txt2;
+        font-size: $textSm;
+        text-align: center;
+        height: 7.2rem;
+        padding-bottom: 2rem;
+      }
+      ul{
+      margin: 0;
+        display: flex;
+        gap: 1.1rem;
+        li{
+            width: 23.5rem;
+            text-align: center;
+            height: 5.5rem;
+            margin-bottom: 6.7rem;
+            margin-top: 9.1rem;
+        }
+        li:last-of-type{
+            width: 31.5rem;
+        }
+      }
+    }
+}
