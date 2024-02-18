@@ -93,6 +93,14 @@
     scale: 1.1;
 }
 
+.nav-product img{
+    transition: 0.3s ease-out;
+}
+
+.nav-product img:hover{
+    scale: 1.1;
+}
+
 .info-index{
     .social a:hover{
         path{
@@ -100,3 +108,28 @@
         }
     }
 }
+
+.desktop-link,footer a,.mobile-dropdown a{
+    transition: 0.3s ease-out;
+}
+
+.desktop-link:hover,footer a:hover,.mobile-dropdown a:hover{
+    color: rgb(167, 167, 167);
+}
+
+form{
+    input[type="text"]:focus{
+        outline: none;
+    }
+}
+
+
+.menu-icon:hover{
+    scale: 1.1;
+}
+
+.phone:hover{
+    scale: 1.1;
+}
+
+
